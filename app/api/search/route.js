@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
-require('dotenv').config();
+
 
 export async function GET(request) {
   
