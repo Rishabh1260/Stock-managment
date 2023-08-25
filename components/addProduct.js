@@ -12,12 +12,12 @@ const AddProductForm = () => {
     setQuery(e.target.value)
     if(!loading){
       setLoading(true)
-      const response = await fetch('api/search?query=' + query)
+      const response = await fetch('/api/search?query=' +query)
       let rjson = await response.json()
       setDropdown(rjson.products)
       setLoading(false)
     }
-  };
+  }; 
 
   const handleChange = (e) => {
     setProductForm({ ...productform, [e.target.name]: e.target.value });
@@ -36,7 +36,6 @@ const AddProductForm = () => {
       });
 
       if (response.ok) {
-        console.log("Product added successfully!");
         setAlert("Your Product is Added Successfully! 🎉");
 
         setProductForm({
