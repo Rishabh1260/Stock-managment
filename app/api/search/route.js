@@ -1,13 +1,13 @@
 import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
-
+require('dotenv').config();
 
 export async function GET(request) {
   
     const query = request.nextUrl.searchParams.get("query")
 
-   const uri = "mongodb+srv://Xrishabh:5LDTkaA3gaj70N7l@cluster0.eijacrx.mongodb.net"
-    // const uri = process.env.MONGODB_URI;
+
+  const uri = process.env.MONGODB_URI;
   
   const client = new MongoClient(uri);
 

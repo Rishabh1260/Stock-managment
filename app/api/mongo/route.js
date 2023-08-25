@@ -1,10 +1,11 @@
 import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
+require('dotenv').config();
 
 
 export async function GET(request) {
   
-  const uri = process.env.MONGODB_URI;
+  const uri = process.env.MONGODB_URI
   
   const client = new MongoClient(uri, {
     useNewUrlParser: true,
