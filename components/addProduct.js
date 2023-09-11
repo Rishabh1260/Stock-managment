@@ -6,15 +6,7 @@ const AddProductForm = (theme) => {
   const [alert, setAlert] = useState("");
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
-  const [dropdown, setDropdown] = useState([
-     {
-            "_id": "64e4a69876611972ea9f8b54",
-            "slug": "Oppo Enco Buds",
-            "price": "1299",
-            "quantity": "25",
-            "category": "Electronics"
-        },
-  ])
+  const [dropdown, setDropdown] = useState([])
   
   const onDropDownEdit = async (e) => {
     setQuery(e.target.value)
